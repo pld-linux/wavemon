@@ -1,0 +1,12 @@
+diff -urN wavemon-0.4.0b.org/wavemon.c wavemon-0.4.0b/wavemon.c
+--- wavemon-0.4.0b.org/wavemon.c	2003-07-14 21:24:00.000000000 +0200
++++ wavemon-0.4.0b/wavemon.c	2003-07-14 21:24:21.000000000 +0200
+@@ -170,7 +170,7 @@
+ 
+ 	if (conf.dump == 1) {
+ 	  dump_parameters(&conf);
+-	  exit();
++	  exit(1);
+ 	}
+ 
+ 	/* initialize the ncurses interface */
