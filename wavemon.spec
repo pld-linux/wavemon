@@ -9,7 +9,7 @@ Source0:	http://www.wavemage.com/wavemon-current.tar.gz
 # Source0-md5:	2baab37eb967fc38dc53f8e4f609daac
 Patch0:		%{name}-exit.patch
 URL:		http://www.wavemage.com/projects.html
-BuildRequires:  ncurses-devel
+BuildRequires:	ncurses-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
