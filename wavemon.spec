@@ -1,4 +1,5 @@
-Summary:	monitoring application for wireless network devices
+Summary:	Monitoring application for wireless network devices
+Summary(pl):	Narzêdzie monitoruj±ce dla urz±dzeñ sieci bezprzewodowych
 Name:		wavemon
 Version:	0.4.0b
 Release:	1
@@ -12,7 +13,10 @@ BuildRequires:  ncurses-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-monitoring application for wireless network devices.
+Monitoring application for wireless network devices.
+
+%description -l pl
+Narzêdzie monitoruj±ce dla urz±dzeñ sieci bezprzewodowych.
 
 %prep
 %setup -q 
@@ -21,7 +25,7 @@ monitoring application for wireless network devices.
 %build
 %configure2_13
 %{__make} \
-	CFLAGS="-I%{_includedir}/ncurses %{rpmcflags}"
+	CFLAGS="-I/usr/include/ncurses %{rpmcflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
