@@ -2,7 +2,7 @@ Summary:	Monitoring application for wireless network devices
 Summary(pl):	Narzêdzie monitoruj±ce dla urz±dzeñ sieci bezprzewodowych
 Name:		wavemon
 Version:	0.4.0b
-Release:	1
+Release:	2
 License:	GPL v2
 Group:		Applications/Networking
 Source0:	http://www.wavemage.com/wavemon-current.tar.gz
@@ -23,6 +23,7 @@ Narzêdzie monitoruj±ce dla urz±dzeñ sieci bezprzewodowych.
 %patch0 -p1
 
 %build
+cp -f /usr/share/automake/config.sub .
 %configure2_13
 %{__make} \
 	CFLAGS="-I/usr/include/ncurses %{rpmcflags}"
