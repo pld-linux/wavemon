@@ -19,7 +19,7 @@ Monitoring application for wireless network devices.
 Narzêdzie monitoruj±ce dla urz±dzeñ sieci bezprzewodowych.
 
 %prep
-%setup -q 
+%setup -q
 %patch0 -p1
 
 %build
