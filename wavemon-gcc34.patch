@@ -1,0 +1,36 @@
+--- wavemon-0.4.0b/conf.c.orig	2005-04-18 12:01:14.034622832 +0200
++++ wavemon-0.4.0b/conf.c	2005-04-18 12:01:50.593065104 +0200
+@@ -411,6 +411,7 @@
+ 									break;
+ 					case t_sep: 	/* gcc -Wall sucks */
+ 					case t_func:
++					;
+ 				}
+ 			}
+ 		}
+@@ -482,6 +483,7 @@
+ 				case t_listval: sprintf(rv, "%s", (char *)ci->v);
+ 				case t_sep: break;
+ 				case t_func:
++				;
+ 			}
+ 			
+ 			add = 1;
+--- wavemon-0.4.0b/conf_scr.c.orig	2005-04-18 12:08:36.681330304 +0200
++++ wavemon-0.4.0b/conf_scr.c	2005-04-18 12:09:59.236779968 +0200
+@@ -64,6 +64,7 @@
+ 							break;
+ 			case t_sep:		/* gcc -Wall sucks */
+ 			case t_func:
++			;
+ 		}
+ 
+ 		if (!item->unit) {
+@@ -137,6 +138,7 @@
+ 						break;
+ 		case t_sep:		/* gcc -Wall sucks */
+ 		case t_func:
++		;
+ 	}
+ }	
+ 
