@@ -8,6 +8,7 @@ Group:		Applications/Networking
 Source0:	http://www.wavemage.com/wavemon-current.tar.gz
 # Source0-md5:	2baab37eb967fc38dc53f8e4f609daac
 Patch0:		%{name}-exit.patch
+Patch1:		%{name}-gcc34.patch
 URL:		http://www.wavemage.com/projects.html
 BuildRequires:	automake
 BuildRequires:	ncurses-devel
@@ -22,6 +23,7 @@ Narzêdzie monitoruj±ce dla urz±dzeñ sieci bezprzewodowych.
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
 
 %build
 cp -f /usr/share/automake/config.sub .
