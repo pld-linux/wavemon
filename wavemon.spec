@@ -29,7 +29,7 @@ Narzêdzie monitoruj±ce dla urz±dzeñ sieci bezprzewodowych.
 cp -f /usr/share/automake/config.sub .
 %configure2_13
 %{__make} \
-	CFLAGS="-I/usr/include/ncurses %{rpmcflags}"
+	CFLAGS="-I%{_includedir}/ncurses %{rpmcflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
