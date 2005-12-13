@@ -5,7 +5,7 @@ Version:	0.4.0b
 Release:	2
 License:	GPL v2
 Group:		Applications/Networking
-Source0:	http://www.wavemage.com/wavemon-current.tar.gz
+Source0:	http://www.wavemage.com/%{name}-current.tar.gz
 # Source0-md5:	2baab37eb967fc38dc53f8e4f609daac
 Patch0:		%{name}-exit.patch
 Patch1:		%{name}-gcc34.patch
@@ -29,7 +29,7 @@ Narzêdzie monitoruj±ce dla urz±dzeñ sieci bezprzewodowych.
 cp -f /usr/share/automake/config.sub .
 %configure2_13
 %{__make} \
-	CFLAGS="-I%{_includedir}/ncurses %{rpmcflags}"
+	CFLAGS="-I/usr/include/ncurses %{rpmcflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
