@@ -1,5 +1,5 @@
 Summary:	Monitoring application for wireless network devices
-Summary(pl.UTF-8):   Narzędzie monitorujące dla urządzeń sieci bezprzewodowych
+Summary(pl.UTF-8):	Narzędzie monitorujące dla urządzeń sieci bezprzewodowych
 Name:		wavemon
 Version:	0.4.0b
 Release:	2
