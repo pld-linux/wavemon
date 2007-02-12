@@ -1,5 +1,5 @@
 Summary:	Monitoring application for wireless network devices
-Summary(pl):	Narzêdzie monitoruj±ce dla urz±dzeñ sieci bezprzewodowych
+Summary(pl.UTF-8):   NarzÄ™dzie monitorujÄ…ce dla urzÄ…dzeÅ„ sieci bezprzewodowych
 Name:		wavemon
 Version:	0.4.0b
 Release:	2
@@ -17,8 +17,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Monitoring application for wireless network devices.
 
-%description -l pl
-Narzêdzie monitoruj±ce dla urz±dzeñ sieci bezprzewodowych.
+%description -l pl.UTF-8
+NarzÄ™dzie monitorujÄ…ce dla urzÄ…dzeÅ„ sieci bezprzewodowych.
 
 %prep
 %setup -q
