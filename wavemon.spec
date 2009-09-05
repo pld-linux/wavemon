@@ -1,16 +1,14 @@
 Summary:	Monitoring application for wireless network devices
 Summary(pl.UTF-8):	Narzędzie monitorujące dla urządzeń sieci bezprzewodowych
 Name:		wavemon
-Version:	0.4.0b
-Release:	2
+Version:	0.6.7
+Release:	1
 License:	GPL v2
 Group:		Applications/Networking
-Source0:	http://www.wavemage.com/%{name}-current.tar.gz
-# Source0-md5:	2baab37eb967fc38dc53f8e4f609daac
-Patch0:		%{name}-exit.patch
-Patch1:		%{name}-gcc34.patch
-URL:		http://www.wavemage.com/projects.html
-BuildRequires:	automake
+Source0:	http://eden-feed.erg.abdn.ac.uk/wavemon/stable-releases/%{name}-%{version}.tar.bz2
+# Source0-md5:	5493a390f2949ac613d76bf7a483e066
+URL:		http://eden-feed.erg.abdn.ac.uk/wavemon/
+BuildRequires:	autoconf
 BuildRequires:	ncurses-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -22,20 +20,19 @@ Narzędzie monitorujące dla urządzeń sieci bezprzewodowych.
 
 %prep
 %setup -q
-%patch0 -p1
-%patch1 -p1
+sed -e 's|\[ncurses.h|\[ncurses/ncurses.h|' -i configure.ac
 
 %build
-cp -f /usr/share/automake/config.sub .
-%configure2_13
+%{__autoconf}
+%configure
 %{__make} \
 	CFLAGS="-I/usr/include/ncurses %{rpmcflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_sbindir},%{_mandir}/man{1,5}}
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man{1,5}}
 
-install %{name} $RPM_BUILD_ROOT%{_sbindir}
+install %{name} $RPM_BUILD_ROOT%{_bindir}
 install *.1 $RPM_BUILD_ROOT%{_mandir}/man1
 install *.5 $RPM_BUILD_ROOT%{_mandir}/man5
 
@@ -44,6 +41,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc AUTHORS Changelog README TODO
-%attr(755,root,root) %{_sbindir}/*
+%doc AUTHORS ChangeLog NEWS README THANKS
+%attr(755,root,root) %{_bindir}/*
 %{_mandir}/man?/*
