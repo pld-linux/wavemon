@@ -1,12 +1,12 @@
 Summary:	Monitoring application for wireless network devices
 Summary(pl.UTF-8):	Narzędzie monitorujące dla urządzeń sieci bezprzewodowych
 Name:		wavemon
-Version:	0.6.7
+Version:	0.7.2
 Release:	1
 License:	GPL v2
 Group:		Applications/Networking
 Source0:	http://eden-feed.erg.abdn.ac.uk/wavemon/stable-releases/%{name}-%{version}.tar.bz2
-# Source0-md5:	5493a390f2949ac613d76bf7a483e066
+# Source0-md5:	0dec700364df7bfb2e066624d0acf7bb
 URL:		http://eden-feed.erg.abdn.ac.uk/wavemon/
 BuildRequires:	autoconf
 BuildRequires:	ncurses-devel
