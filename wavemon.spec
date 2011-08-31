@@ -2,7 +2,7 @@ Summary:	Monitoring application for wireless network devices
 Summary(pl.UTF-8):	Narzędzie monitorujące dla urządzeń sieci bezprzewodowych
 Name:		wavemon
 Version:	0.7.2
-Release:	1
+Release:	2
 License:	GPL v2
 Group:		Applications/Networking
 Source0:	http://eden-feed.erg.abdn.ac.uk/wavemon/stable-releases/%{name}-%{version}.tar.bz2
