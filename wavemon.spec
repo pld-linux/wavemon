@@ -1,12 +1,12 @@
 Summary:	Monitoring application for wireless network devices
 Summary(pl.UTF-8):	Narzędzie monitorujące dla urządzeń sieci bezprzewodowych
 Name:		wavemon
-Version:	0.7.5
+Version:	0.7.6
 Release:	1
 License:	GPL v2
 Group:		Applications/Networking
-Source0:	http://eden-feed.erg.abdn.ac.uk/wavemon/stable-releases/%{name}-%{version}.tar.bz2
-# Source0-md5:	77d4a0f099ca98cf98a915adc70694ba
+Source0:	https://github.com/uoaerg/wavemon/archive/v%{version}/%{name}-%{version}.tar.gz
+# Source0-md5:	cd0049f174745d32b4fdf3b63d897bad
 URL:		http://eden-feed.erg.abdn.ac.uk/wavemon/
 BuildRequires:	autoconf
 BuildRequires:	ncurses-devel
@@ -26,7 +26,8 @@ sed -e 's|\[ncurses.h|\[ncurses/ncurses.h|' -i configure.ac
 %{__autoconf}
 %configure
 %{__make} \
-	CFLAGS="-I/usr/include/ncurses %{rpmcflags}"
+	CFLAGS="-I/usr/include/ncurses %{rpmcflags}" \
+	LDFLAGS="-pthread"
 
 %install
 rm -rf $RPM_BUILD_ROOT
